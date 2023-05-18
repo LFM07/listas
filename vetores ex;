@@ -1,1 +1,17 @@
+//exemplo vetores
+
 #include<stdio.h>
+#include<math.h>
+//vetores p1
+// char nome[50];
+int main() {
+	char letras[50];
+	int cont = 0, i;
+	for(i = 97; i<=122; i++){
+		letras[cont] = i;
+		cont = cont + 1;	
+	}
+	for(i = 0; i < 26; i++){
+		printf("%d == %c\n", letras[i], letras[i]);
+	}
+}
