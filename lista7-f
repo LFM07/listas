@@ -1,0 +1,77 @@
+ex1
+// Faça uma função que receba como parâmetro um vetor de números
+// inteiros e a quantidade de números armazenados no vetor.
+// Esta função deverá retornar o produto dos números.
+#include<stdio.h>
+#include<math.h>
+int vetores(int vetor[4])//0..3
+{
+	int produto, i;
+	vetor[0] = 10;
+	vetor[1] = 20;
+	vetor[2] = 30;
+	vetor[3] = 40;
+	for(i = 0; i <= 3; i++){
+		produto = vetor[i] * vetor[i];
+	}
+	return produto;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+ex2
+//Faça uma função que receba como parâmetro um vetor
+// de números inteiros e a quantidade de números armazenados
+//no  vetor.
+//Esta  função  deverá  calcular  a  quantidade  de  números  pares
+//e  a  quantidade  de números ímpares, armazenando-as nas variáveis
+// cujos endereços são fornecidos na chamada da função.
+#include<stdio.h>
+int vetores(int vetor[4], int *impar,int *par) //0..3
+{
+	int i;
+	for(i = 0; i < 4; i++){
+		result = vetor[i] % 2;
+	}
+	*impar = result == 1;
+	*par = result == 0;
+	if(result = 0){
+		printf("\nNumero par");
+	}
+	else{
+		printf("\nNumero impar");
+	}
+  return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ex3
+//Faça  uma  função  que  receba  como  parâmetro  um  vetor  de
+//números  reais,  a  quantidade  de  números armazenados no vetor
+//e a média dos números. Esta função deverá retornar a quantidade
+// de números acima da média dos números.
+#include<stdio.h>
+float vetores(float vetor[5])
+{
+	float media, i, soma=0;
+	for(i = 0; i < 5; i++){
+		soma = soma + vetor[i];
+	}
+	media = soma/5;
+	prinf("A media vale %.2f", media);
+	printf("valores maiores q a media:\n";)
+	for(i = 0; i < 5; i++){
+		if(vetor[i] > media){
+			printf("%d\n", vetor[i]);
+		}
+	}
+	printf("valores menores q media:\n");
+	for(i = 0; i < 5; i++){
+		if(vetor[i] < media){
+			printf("%d\n", vetor[i]);
+		}
+	}
+	return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ex4
