@@ -1,0 +1,81 @@
+QUESTAO 1 ---- 
+#include <stdio.h>
+#define NUM_NOTAS 11
+void inicializa(int vetor[], int tamanho){
+	int i;
+	for(i = 0; i < tamanho; i++){
+		vetor[i] = 0;
+	}
+}
+void exibe(int vetor[], int tamanho){
+	int i;
+	for(i = 0; i < tamanho; i++){
+		printf("Nota %d: %d Aluno(s)\n", i, vetor[i]);
+	}
+}
+int main(){
+	int notas[NUM_NOTAS];
+	inicializa(notas, NUM_NOTAS);
+	int nota;
+	printf("Digite a nota dos alunos(0 a 10): ");
+	while(1){
+		scanf("%d", &nota);
+		if(nota == -1){
+			break;
+		}
+			else if(nota >= 0 && nota <=10){
+				notas[nota]++;
+			}
+				else{
+					printf("Nota inválida, digite novamente.\n");
+				}
+	}
+	printf("Quantidade de alunos em cada nota:\n");
+	exibe(notas, NUM_NOTAS);
+	return 0;
+}
+===================================================================================================================================
+QUESTAO 2 -
+#include <stdio.h>
+#define NUM_DEP 10
+void inicializa(float vetor[], int tamanho){
+	int i;
+	for(i = 0; i < tamanho; i++){
+		vetor[i] = -1;
+	}
+}
+void exibe(float vetor[], int tamanho){
+	int i;
+	printf("Menor salario de cada departamento:\n");
+	for(i = 0; i < tamanho; i++){
+		if(vetor[i] != -1){
+			printf("Departamento %d: R$%.2f\n", i+1, vetor[i]);
+	}
+			else{
+				printf("Departamento %d: Nenhum funcionario\n", i+1);
+			}
+    }
+}
+int main(){
+	float salarios[NUM_DEP];
+	inicializa(salarios, NUM_DEP);
+	int dep, i;
+	float salario;
+	printf("Digite o departamento do funcionario(1 a 10) e o salario de cada funcionario: \n");
+	for(i = 0; i <= 500; i++){
+		scanf("%d%f", &dep, &salario);
+		if(dep >=1 && dep <= 10){
+			if(salarios[dep - 1] == -1 || salario < salarios[dep - 1]){
+				salarios[dep - 1] = salario;
+			}
+		}
+		else {
+			printf("Codigo de departamento invalido. Digite novamente.\n");
+			i--;
+		}
+	}
+	exibe(salarios, NUM_DEP);
+	return 0;
+}
+======================================================================================================================
+QUESTAO 3 -
