@@ -1,0 +1,117 @@
+questao 39---------
+
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main(){
+	int tempo;
+	float salario;
+	printf("Digite o salario e o tempo de empresa do funcionario: \n");
+	scanf("%f%d", &salario, &tempo);
+	if(salario <= 500 && tempo < 1){
+		salario = salario * 1.25;
+		printf("O novo salario é %.2f", salario);
+	}
+		else if(salario <= 500 && tempo >= 1 && tempo <= 3){
+			salario = (salario * 1.25) + 100;
+			printf("O novo salario é %.2f", salario);
+		}
+			else if(salario <= 500 && tempo >= 4 && tempo <= 6){
+				salario = (salario * 1.25) + 200;
+				printf("O novo salario é %.2f", salario);
+			}
+				else if(salario <= 500 && tempo >= 7 && tempo <= 10){
+					salario = (salario *1.25) + 300;
+					printf("O novo salario é %.2f", salario);
+				}
+					else if(salario <= 500 && tempo > 10){
+						salario = (salario * 1.25) + 500;
+						printf("O novo salario é %.2f", salario);
+					}
+						else if(salario <= 1000 && tempo < 1){
+							salario = salario * 1.20;
+							printf("O novo salario é %.2f", salario);
+						}
+							else if(salario <= 1000 && tempo >= 1 && tempo <= 3){
+								salario = (salario * 1.20) + 100;
+								printf("O novo salario é %.2f", salario);
+							}
+								else if(salario <= 1000 && tempo >= 4 && tempo <= 6){
+									salario = (salario * 1.20) + 200;
+									printf("O novo salario é %.2f", salario);
+								}
+									else if(salario <= 1000 && tempo >= 7 && tempo <= 10){
+										salario = (salario * 1.20) + 300;
+										printf("O novo salario é %.2f", salario);
+									}
+										else if(salario <= 1000 && tempo > 10){
+											salario = (salario * 1.20) + 500;
+											printf("O novo salario é %.2f", salario);
+										}
+											else if(salario <= 1500 && tempo < 1){
+												salario = (salario * 1.15);
+												printf("O novo salario é %.2f", salario);
+											}
+												else if(salario <= 1500 && tempo >= 1 && tempo <= 3){
+													salario = (salario * 1.15) + 100;
+													printf("O novo salario é %.2f", salario);
+												}
+													else if(salario <= 1500 && tempo >= 4 && tempo <= 6){
+														salario = (salario * 1.15) + 200;
+														printf("O novo salario é %.2f", salario);
+													}
+														else if(salario <= 1500 && tempo >= 7 && tempo <= 10){
+															salario = (salario * 1.15) + 300;
+															printf("O novo salario é %.2f", salario);
+														}
+															else if(salario <= 1500 && tempo > 10){
+																salario = (salario * 1.15) + 500;
+																printf("O novo salario é %.2f", salario);
+															}
+																else if(salario <= 2000 && tempo < 1){
+																	salario = (salario * 1.10);
+																	printf("O novo salario é %.2f", salario);
+																}
+																	else if(salario <= 2000 && tempo >= 1 && tempo <= 3){
+																		salario = (salario * 1.10) + 100;
+																		printf("O novo salario é %.2f", salario);
+																	}
+																		else if(salario <= 2000 && tempo >= 4 && tempo <= 6){
+																			salario = (salario * 1.10) + 200;
+																			printf("O novo salario é %.2f", salario);
+																		}
+																			else if(salario <= 2000 && tempo >= 7 && tempo <= 10){
+																				salario = (salario * 1.10) + 300;
+																				printf("O novo salario é %.2f", salario);
+																			}
+																				else if(salario <= 2000 && tempo > 10){
+																					salario = (salario * 1.10) + 500;
+																					printf("O novo salario é %.2f", salario);
+																				}
+																					else if(salario > 2000 && tempo < 1){
+																						salario = salario;
+																						printf("O novo salario é %.2f", salario);
+																					}
+																						else if(salario > 2000 && tempo >= 1 && tempo <= 3){
+																							salario = salario + 100;
+																							printf("O novo salario é %.2f", salario);
+																						}
+																							else if(salario > 2000 && tempo >= 4 && tempo <= 6){
+																								salario = salario + 200;
+																								printf("O novo salario é %.2f", salario);
+																							}
+																								else if(salario > 2000 && tempo >= 7 && tempo <= 10){
+																									salario = salario + 300;
+																									printf("O novo salario é %.2f", salario);
+																								}
+																									else if(salario > 2000 && tempo > 10){
+																										salario = salario + 500;
+																										printf("O novo salario é %.2f", salario);
+																									}
+																										else{
+																											printf("---ERRO---");
+																										}
+																
+						
+	return 0;
+}
