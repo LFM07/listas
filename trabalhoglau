@@ -11,6 +11,14 @@ int main(){
 	}
 	media = media/qtdnotas;
 	printf("A media do aluno foi %.2f, e a quantidade de notas digitadas %.2f", media, qtdnotas);
-	
+	if(media >= 7.0){
+		printf("Aprovado\n");
+	}
+		else if(media >= 3.0 && media < 7.0){
+			printf("Prova final\n");
+		}
+			else{
+				printf("Reprovado\n");
+			}
 	return 0;
 }
