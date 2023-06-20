@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+	float media, notas, qtdnotas;
+	printf("Digite as notas do aluno e quando terminar digite (-1): \n");
+	while(notas != -1){
+		scanf("%f", &notas);
+		if(notas >= 0 && notas <= 10){
+			media += notas;
+				qtdnotas++;
+			}
+	}
+	media = media/qtdnotas;
+	printf("A media do aluno foi %.2f, e a quantidade de notas digitadas %.2f", media, qtdnotas);
+	
+	return 0;
+}
