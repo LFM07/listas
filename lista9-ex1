@@ -1,0 +1,27 @@
+#include<stdio.h>
+#define TOT 11
+void inicializa(int v[])
+{
+	int i;
+	for(i = 0; i < TOT; i++){
+		v[i] = 0;
+	}
+}
+void exibe(int v[])
+{
+	int i;
+	for(i = 0; i < TOT; i++){
+		printf("Nota %d = %d Alunos\n", i, v[i]);
+	}
+}
+int main(){
+	int nota, v[TOT];
+	inicializa(v);
+	while(nota != -1)
+		if(nota <= 10 && nota >= 0){
+			printf("Digite a nota do aluno: \n");
+			scanf("%d", &nota);
+			v[nota]++;
+		}
+	exibe(v);
+}
