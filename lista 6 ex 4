@@ -1,0 +1,56 @@
+#include<stdio.h>
+#define PECAS 100
+int classificacao(int classifica)
+{
+	if(classifica == 1){
+		return classifica;
+	}
+		else if(classifica == 2){
+			return classifica;
+		}
+			else if(classifica == 3){
+				return classifica;
+			}
+				else if(classifica == 4){
+					return classifica;
+				}
+					else{
+						return 0;
+					}
+}
+void classe(int classifica, int *minimo, int *maximo)
+{
+	switch(classifica){
+		case 1:
+			*minimo = 100; 
+			*maximo = 120;
+			break;
+		case 2:
+			*minimo = 150; 
+			*maximo = 180;
+			break;
+		case 3:
+			*minimo = 200;
+			*maximo = 250;
+			break;
+		case 4:
+			*minimo = 250;
+			*maximo = 300;
+			break;
+	}
+}
+int main()
+{
+	int i, codigo, classifica, maximo, minimo;
+	for(i = 0; i < PECAS; i++){
+		printf("Digite o codigo da peça e a classificacao: \n");
+		scanf("%d%d", &codigo, &classifica);
+		classificacao(classifica);
+		classe(classifica, &minimo, &maximo);
+		printf("Código: %d\n", codigo);
+        printf("Quantidade mínima em estoque: %d\n", minimo);
+        printf("Quantidade máxima em estoque: %d\n", maximo);
+        printf("\n");
+	}
+	return 0;
+}
