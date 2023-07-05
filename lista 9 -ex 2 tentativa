@@ -1,0 +1,32 @@
+#include<stdio.h>
+#define DEP 11
+#define FUN 3
+void inicializa(float v[])
+{
+	int i;
+	for(i = 1; i < DEP; i++){
+		v[i] = 0;
+	}
+}
+void exibe(float v[])
+{
+	int i;
+	for(i = 1; i < DEP; i++){
+		printf("Departamento %d = Menor Salario %f\n", i, v[i]);
+	}
+}
+int main()
+{
+	float v[DEP], salario;
+	int i, depar;
+	inicializa(v);
+	for(i = 0; i < FUN; i++){
+		printf("Digite o Departamento(0 a 10) e o salario do funcionario: \n");
+		scanf("%d%f", &depar, &salario);
+		if(salario < v[depar - 1]){
+			v[depar - 1] = salario;
+		}
+	}
+	exibe(v);
+	return 0;
+}
