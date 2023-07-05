@@ -1,0 +1,42 @@
+#include<stdio.h>
+#define MAX_CLIENTE 10573
+struct cliente{
+	int numero;
+	float saldo;
+};
+typedef struct cliente Tcliente;
+void exibe(Tcliente v[], int qtdcliente, float saldomd){
+	int i;
+	for(i = 0; i < qtdcliente; i++){
+		printf("Numero da conta %d\n", v[i].numero);
+		printf("Saldo %.2f\n", v[i].saldo);
+		
+		
+		if(v[i].saldo > saldomd){
+			printf("Saldo acima do saldo medio\n");
+		}
+			else if(v[i].saldo < saldomd){
+				printf("Saldo abaixo do saldo medio\n");
+			}
+				else{
+					printf("Saldo igual ao saldo medio\n");
+				}
+	}
+}
+int main(){
+	int qtd, i;
+	float saldomedio;
+	Tcliente cliente[MAX_CLIENTE];
+	for(i = 0; i < MAX_CLIENTE; i++){
+		printf("Digite o numero da conta ou (0) para sair: \n");
+		scanf("%d", &cliente[i].numero);
+		if(cliente[i].numero == 0)
+		break;
+		printf("Digite o saldo da conta: \n");
+		scanf("%f", &cliente[i].saldo);
+		saldomedio = saldomedio + cliente[i].saldo;
+	}
+	saldomedio = saldomedio/i;
+	exibe(cliente, i, saldomedio);
+	return 0;
+}
