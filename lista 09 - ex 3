@@ -1,0 +1,36 @@
+#include<stdio.h>
+#define TOT 3
+struct aluno{
+	char nome[30];
+	float mdaluno;
+	int nota1, nota2;
+};
+typedef struct aluno Taluno;
+void exibe(Taluno v[], float mdturma){
+	int i;
+	for(i = 0; i < TOT; i++){
+		if(v[i].mdaluno > mdturma){
+			printf("Nome: %s\n Media: %.2f\n Situação: Acima da Media\n", v[i].nome, v[i].mdaluno);
+		}
+			else if(v[i].mdaluno == mdturma){
+				printf("Nome: %s\n Media: %.2f\n Situação: Na media\n", v[i].nome, v[i].mdaluno);
+			}
+				else{
+					printf("Nome: %s\n Media: %.2f\n Situação: Abaixo da Media\n", v[i].nome, v[i].mdaluno);
+				}
+	}
+}
+int main(){
+	Taluno v[TOT];
+	float mdturma;
+	int i, soma;
+	for(i = 0; i < TOT; i++){
+		printf("Digite o nome do aluno: \n");
+		printf("Digite a nota1 e a nota2: \n");
+		scanf("%s%d%d", &v[i].nome, &v[i].nota1, &v[i].nota2);
+		v[i].mdaluno += (v[i].nota1 + v[i].nota2)/2;
+		mdturma = v[i].mdaluno + mdturma;
+	}
+	mdturma /= TOT;
+	exibe(v, mdturma);
+}
