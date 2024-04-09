@@ -1,0 +1,20 @@
+EXERCICIO 1 -----------------------
+
+
+#include <stdio.h>
+void salario_aumento(float *salario, float percentual){
+    *salario = *salario * (percentual/ 100 + 1);
+}
+
+int main(){
+    float conta, aumento;
+    printf("Digite o salario e o percentual de aumento: \n");
+    scanf("%f%f", &conta, &aumento);
+
+    salario_aumento(&conta, aumento);
+
+    printf("O Salario com o aumento e %.2f, e o aumento percentual foi %.2f", conta, aumento);
+
+    return 0;
+
+}
