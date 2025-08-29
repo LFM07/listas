@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo com jQuery</title>
+
+  <!-- Importando jQuery via CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <h1>Testando jQuery</h1>
+  <button id="btn">Clique aqui</button>
+
+  <script>
+    // Exemplo simples
+    $(document).ready(function() {
+      $("#btn").click(function() {
+        alert("Pitbull das Automações mandou um salve!");
+      });
+    });
+  </script>
+</body>
+</html>
